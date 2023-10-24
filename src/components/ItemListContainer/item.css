@@ -1,0 +1,14 @@
+.mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    font-size: 30px;
+}
+.ww-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+}

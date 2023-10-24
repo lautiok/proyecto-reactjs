@@ -1,12 +1,11 @@
 import CartWidget from "../CartWidget/CartWidget";
-import WolfWidget from "../IcoWidget/WolfWidget";
-import "./nav.css";
+import style from "./nav.css";
 
 export default function NavBar() {
   return (
     <div className="nav-v1">
         <div className="nav-v2">
-            <WolfWidget />
+            <img className="logo" src="/img/wolf-logo.png" alt="logo-nav" />
             <h1> Wolf</h1>
         </div>
         <div className="barranav">

@@ -1,3 +1,13 @@
+.logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.logo-item img{
+    width: 100px;
+
+}
 .mensaje {
     display: flex;
     justify-content: center;

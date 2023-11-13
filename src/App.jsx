@@ -1,15 +1,15 @@
-import './App.css'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import NavBar from './components/NavBar/NavBar'
+import { ItemDetailContainer, ItemListContainer, NavBar } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-
+export default function App() {
   return (
-    <>
-    <NavBar />
-    <ItemListContainer message={"Bienvenidos a Wolf"}/>
-    </>
-  )
-}
-
-export default App
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/category/:category" element={<ItemListContainer/>} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};

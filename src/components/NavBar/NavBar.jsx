@@ -13,11 +13,11 @@ export default function NavBar() {
             <Link to={"/"}>
               <button className="btn">Inicio</button>
             </Link>
-            <Link to={"/category/remera"}>
-              <button className="btn">Remeras</button>
+            <Link to={"/category/masculino"}>
+              <button className="btn">Hombre</button>
             </Link>
-            <Link to={"/category/pantalon"}>
-              <button className="btn">Pantalon</button>
+            <Link to={"/category/femenino"}>
+              <button className="btn">Mujer</button>
             </Link>
         </div>
         <div className="c-product">

@@ -13,7 +13,7 @@ export const ItemListContainer = ({ greeting }) => {
 
     getProducts()
       .then((resp) => {
-        const filteredProducts = category ? resp.filter(product => product.category === category) : resp;
+        const filteredProducts = category ? resp.filter(product => product.gender === category) : resp;
         setProducts(filteredProducts);
       })
       .catch((error) => {

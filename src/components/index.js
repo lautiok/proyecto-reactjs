@@ -1,9 +1,13 @@
+export * from './CardItem/CardItem';
+export * from './Cart/Card';
 export { default as CartWidget } from './CartWidget/CartWidget';
+export * from './Footer/Footer';
 export * from './Item/Item';
 export * from './ItemCount/ItemCount';
 export * from './ItemDetail/ItemDetail';
 export * from './ItemDetailContainer/ItemDetailContainer';
 export * from './ItemList/ItemList';
 export * from './ItemListContainer/ItemListContainer';
-export { default as NavBar } from './NavBar/NavBar';
+export * from './NavBar/NavBar';
+export * from './OrderForm/OrderForm';
 export * from './index';

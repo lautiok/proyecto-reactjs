@@ -15,7 +15,8 @@ export default function App() {
           <Route path="/category/:category" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/myproducts" element={<MyProducts />} />        </Routes>
+          <Route path="/myproducts" element={<MyProducts />} />
+        </Routes>
         <Footer />
       </CartProvider>
     </BrowserRouter>

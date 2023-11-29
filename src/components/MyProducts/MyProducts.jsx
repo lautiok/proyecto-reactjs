@@ -9,7 +9,7 @@ export default function MyProducts() {
         const fetchData = async () => {
             const orderCol = collection(db, 'order');
             const orderSnapshot = await getDocs(orderCol);
-            const orderList = orderSnapshot.docs.map(doc => doc.data());
+            const orderList = orderSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setOrders(orderList);
         }
         fetchData()
@@ -20,7 +20,9 @@ export default function MyProducts() {
             {orders.map((order, index) => (
                 <div key={index} className="card">
                     <div className="card-body">
-                        <h2 className="card-title">{`${order.firstName} ${order.lastName}`}</h2>                        <p className="card-text">{order.email}</p>
+                        <p className="card-title">Orden: {order.id}</p>
+                        <h3>{`${order.firstName} ${order.lastName}`}</h3>
+                        <p className="card-text">{order.email}</p>
                         <ul>
                             {order.items && order.items.map((item, i) => {
                                 console.log(item);

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext'
 import { db } from "../../config/FirebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from 'sweetalert2';
@@ -9,6 +10,7 @@ export const OrderForm = ({ cart }) => {
     const [email, setEmail] = useState('');
     const [confirmEmail, setConfirmEmail] = useState('');
     const [phone, setPhone] = useState('');
+    const { clearCart } = useContext(CartContext)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -37,6 +39,7 @@ export const OrderForm = ({ cart }) => {
                 `Orden creada con éxito. Número de orden: ${docRef.id}`,
                 'success'
             );
+            clearCart();
         } catch (error) {
             Swal.fire({
                 icon: 'error',

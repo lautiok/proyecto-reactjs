@@ -1,8 +1,8 @@
-# 🚀 Proyecto ReactJs
+# 🚀 Proyecto Ecommerce ReactJs
 
 ## 📖 Sobre el Proyecto
 
-Este proyecto es una aplicación de comercio electrónico construida con React y Firebase. Muestra una colección de productos con sus detalles como nombre, imagen, género, precio, categoría y stock. Los datos de los productos se almacenan en Firebase y se obtienen y muestran dinámicamente en la aplicación.
+Este proyecto consiste en una aplicación de comercio electrónico desarrollada utilizando React y Firebase. La aplicación exhibe una colección de productos, mostrando sus detalles, tales como nombre, imagen, género, precio, categoría y stock. Los datos de los productos están almacenados en Firebase y se recuperan y muestran de forma dinámica en la aplicación. Además, la aplicación se encuentra sincronizada con la API de WhatsApp. Cuando se realiza una compra, se envía automáticamente un mensaje a través de WhatsApp, proporcionando al vendedor la información necesaria para gestionar eficientemente la transacción.
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -23,6 +23,10 @@ Para instalar y ejecutar este proyecto, sigue estos pasos:
     2. Navega hasta el directorio del proyecto: `cd repo`
     3. Instala las dependencias: `npm install`
     4. Inicia el servidor de desarrollo: `npm run dev`
+
+## 🚀 Deploy de la aplicación
+
+Para ver la aplicación acceder al siguiente enlace: https://ecommerce-whatsapp.netlify.app/
 
 ## 🔗 Enlaces
 

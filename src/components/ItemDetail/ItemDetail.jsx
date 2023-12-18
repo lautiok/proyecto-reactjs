@@ -41,7 +41,7 @@ export const ItemDetail = ({ id }) => {
           <div className="card mx-auto">
             <img
               src={product.img}
-              className="card-img-top img-fluid custom-img-size d-block mx-auto"
+              className="card-img-top img-fluid custom-img-size d-block mx-auto mt-4"
               alt={product.name}
             />
             <div className="mt-4">

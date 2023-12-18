@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import { CartContext } from '../../context/CartContext'
 import { db } from "../../config/FirebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from 'sweetalert2';
+import { CartContext } from '../../context/CartContext';
 
 export const OrderForm = ({ cart }) => {
     const [firstName, setFirstName] = useState('');
@@ -34,11 +34,24 @@ export const OrderForm = ({ cart }) => {
 
         try {
             const docRef = await addDoc(collection(db, 'order'), order);
-            Swal.fire(
-                'Exelente!',
-                `Orden creada con éxito. Número de orden: ${docRef.id}`,
-                'success'
-            );
+
+            const whatsappMessage = `
+¡Hola! He realizado un pedido con los siguientes detalles:
+
+Nombre: ${order.firstName}
+Apellido: ${order.lastName}
+Email: ${order.email}
+ID de la orden: ${docRef.id}
+
+Productos:
+${order.items.map(item =>
+                `📦 Producto: ${item.item.name}
+💰 Precio: ${item.item.price}
+🛒 Cantidad: ${item.quantity}`
+            ).join('\n\n')}
+        `;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=5491136620274&text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl);
             clearCart();
         } catch (error) {
             Swal.fire({

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../config/FirebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import { ItemList } from "../ItemList/ItemList";
+import { Hero } from "../Hero/Hero";
 
 export const ItemListContainer = ({ greeting }) => {
   const { category } = useParams();
@@ -27,9 +28,14 @@ export const ItemListContainer = ({ greeting }) => {
   }, [category]);
 
   return (
-    <div className="container text-center">
-      <div>{greeting}</div>
-      {isLoading ? <h2 className="mt-5">Cargando productos...</h2> : <ItemList products={products} />}
-    </div>
+    <>
+      <Hero />
+      <div className="container text-center">
+        <h2 className=" mt-2 mb-2 ">Nuestros productos:</h2>
+        <div>{greeting}</div>
+        {isLoading ? <h2 className="mt-5">Cargando productos...</h2> : <ItemList products={products} />}
+      </div>
+    </>
   );
+
 };

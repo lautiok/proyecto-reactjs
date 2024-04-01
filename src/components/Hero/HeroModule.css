@@ -1,0 +1,14 @@
+.hero {
+    background: url('../../assets/aestheticwebp.webp'), linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 10rem;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 19rem;
+    margin-right: 19rem;
+}
